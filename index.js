@@ -2,7 +2,8 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
-import urlRoutes from "./routes/urlRoutes.js"
+import urlRoutes from "./routes/urlRoutes.js";
+import healthRoutes from "./routes/healthRoutes.js";
 
 
 const app = express();
@@ -10,7 +11,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("", urlRoutes);
+app.use("/u", urlRoutes);
+app.use("/health", healthRoutes);
 
 const PORT = process.env.PORT || 5000;
 

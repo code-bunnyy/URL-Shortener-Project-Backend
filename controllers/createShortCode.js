@@ -33,7 +33,7 @@ export const createShortCode = async (req, res) => {
         return res.status(201).json({
             shortCode: url.shortCode,
             originalUrl: url.originalUrl,
-            shortUrl: `${process.env.BACKEND_URL}/${url.shortCode}`,
+            shortUrl: `${process.env.BACKEND_URL}/u/${url.shortCode}`,
         });
     } catch (error) {
         return res.status(500).json({

@@ -8,6 +8,7 @@ router.post("/", createShortCode);
 
 router.get("/:shortCode", redirectToOriginalUrl);
 
+
 export default router;
 
 
