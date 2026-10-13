@@ -18,7 +18,7 @@ export const createShortCode = async (req, res) => {
             return res.status(200).json({
                 shortCode: existingUrl.shortCode,
                 originalUrl: existingUrl.originalUrl,
-                shortUrl: `${process.env.BACKEND_URL}/${existingUrl.shortCode}`,
+                shortUrl: `${process.env.BACKEND_URL}/u/${existingUrl.shortCode}`,
             });
         }
 
